@@ -26,6 +26,8 @@ class Sockets {
         const yourTicket = this.ticketList.asingnedTicket(agent, desktop);
 
         callback(yourTicket);
+
+        this.io.emit('ticket-assinged', this.ticketList.last13);
       });
     });
   }
